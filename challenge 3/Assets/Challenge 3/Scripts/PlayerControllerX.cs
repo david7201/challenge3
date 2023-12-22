@@ -18,6 +18,8 @@ public class PlayerControllerX : MonoBehaviour
     public AudioClip moneySound;
     public AudioClip explodeSound;
     public float heightLimit = 14f;
+    public AudioClip bounceSound;
+
 
 
 
@@ -68,12 +70,12 @@ public class PlayerControllerX : MonoBehaviour
             Destroy(other.gameObject);
 
         }
-       /* else if (other.gameObject.CompareTag("Ground"))
+        else if (other.gameObject.CompareTag("Ground"))
         {
-            playerAudio.PlayOneShot(bounce, 1.0f);
+            playerAudio.PlayOneShot(bounceSound, 1.0f);
 
             playerRb.AddForce(Vector3.up * 5, ForceMode.Impulse);
-        }*/
+        }
 
     }
 
